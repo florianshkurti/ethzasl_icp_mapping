@@ -14,9 +14,9 @@ Parameters for ICRA 2014: "Long-term 3D map maintenance in dynamic environments"
 	<node name="mapper" type="dynamic_mapper" pkg="ethzasl_icp_mapper" output="screen" >
 		<remap from="cloud_in" to="/velodyne_points" />
 		<param name="subscribe_scan" value="false"/>
-		<param name="icpConfig" value="$(find ethzasl_icp_mapper)/launch/artor/icp_dynamic.yaml" />
-		<param name="inputFiltersConfig" value="$(find ethzasl_icp_mapper)/launch/artor/input_filters.yaml" />
-		<!--param name="mapPostFiltersConfig" value="$(find ethzasl_icp_mapper)/launch/artor/map_post_filters.yaml" /-->
+		<param name="icpConfig" value="$(find ethzasl_icp_mapper)/launch/mrl/icp_dynamic.yaml" />
+		<param name="inputFiltersConfig" value="$(find ethzasl_icp_mapper)/launch/mrl/input_filters.yaml" />
+		<!--param name="mapPostFiltersConfig" value="$(find ethzasl_icp_mapper)/launch/mrl/map_post_filters.yaml" /-->
 		
 		<!--Put that back! -->
 		<param name="odom_frame" value="/velodyne" />
@@ -55,6 +55,6 @@ Parameters for ICRA 2014: "Long-term 3D map maintenance in dynamic environments"
 		<remap from="points2_out" to="/obstacle_cloud2" />
 	</node-->
 
-      <node name="rviz" type="rviz" pkg="rviz" output="screen" args="-d $(find ethzasl_icp_mapper)/launch/artor/artor.rviz" />
+      <node name="rviz" type="rviz" pkg="rviz" output="screen" args="-d $(find ethzasl_icp_mapper)/launch/mrl/mrl.rviz" />
 
 </launch>

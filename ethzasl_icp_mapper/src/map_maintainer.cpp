@@ -289,7 +289,7 @@ void MapMaintener::processCloud(DP newPointCloud, const TP TScannerToMap)
 	const size_t goodCount(newPointCloud.features.cols());
 	if (goodCount == 0)
 	{
-		ROS_ERROR("I found no good points in the cloud");
+		ROS_ERROR("Map Maintainer: I found no good points in the cloud");
 		return;
 	}
 	

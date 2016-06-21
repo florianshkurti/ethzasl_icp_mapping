@@ -71,7 +71,7 @@ bool CloudMatcher::match(ethzasl_icp_mapper::MatchClouds::Request& req, ethzasl_
 	
 	if (referenceGoodCount == 0)
 	{
-		ROS_ERROR("I found no good points in the reference cloud");
+		ROS_ERROR("Matcher Service: I found no good points in the reference cloud");
 		return false;
 	}
 	if (referenceGoodRatio < 0.5)
@@ -87,7 +87,7 @@ bool CloudMatcher::match(ethzasl_icp_mapper::MatchClouds::Request& req, ethzasl_
 	
 	if (readingGoodCount == 0)
 	{
-		ROS_ERROR("I found no good points in the reading cloud");
+		ROS_ERROR("Matcher Service: I found no good points in the reading cloud");
 		return false;
 	}
 	if (readingGoodRatio < 0.5)
